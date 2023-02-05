@@ -1,8 +1,8 @@
 {
-  "name": "cdk-ts-boilerplate",
+  "name": "slack-qrcode-bot",
   "version": "0.1.0",
   "bin": {
-    "cdk-ts-boilerplate": "bin/cdk-ts-boilerplate.js"
+    "slack-qrcode-bot": "bin/slack-qrcode-bot.js"
   },
   "scripts": {
     "build": "tsc",
