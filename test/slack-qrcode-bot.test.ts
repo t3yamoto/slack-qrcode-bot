@@ -1,16 +1,12 @@
-// import * as cdk from 'aws-cdk-lib';
-// import { Template } from 'aws-cdk-lib/assertions';
-// import * as SlackQRCodeBot from '../lib/slack-qrcode-bot-stack';
+import * as cdk from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
+import * as SlackQRCodeBot from '../lib/slack-qrcode-bot-stack';
 
-// example test. To run these tests, uncomment this file along with the
-// example resource in lib/slack-qrcode-bot-stack.ts
 test('SQS Queue Created', () => {
-  //   const app = new cdk.App();
-  //     // WHEN
-  //   const stack = new SlackQRCodeBot.SlackQRCodeBotStack(app, 'MyTestStack');
-  //     // THEN
-  //   const template = Template.fromStack(stack);
-  //   template.hasResourceProperties('AWS::SQS::Queue', {
-  //     VisibilityTimeout: 300
-  //   });
+  const app = new cdk.App();
+  // when
+  const stack = new SlackQRCodeBot.SlackQRCodeBotStack(app, 'MyTestStack');
+  // then
+  const template = Template.fromStack(stack);
+  template.resourceCountIs('AWS::SQS::Queue', 1);
 });
